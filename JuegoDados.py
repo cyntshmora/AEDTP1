@@ -1,8 +1,8 @@
 import random
 # dados de prueba
-a = 2
-b = 4
-c = 3
+a = 4
+b = 5
+c = 6
 
 puntos_player_1 = 0
 puntos_player_2 = 0
@@ -17,39 +17,34 @@ cA = a == c
 
 print("RONDA 1")
 print("Jugador 1")
+
 if (aB and bC):      # se compara si los 3 dados son iguales
     puntos_player_1 = +6
     print("suma 6")
 else:
-    if (aB):         # relanzamiento para dado 3
-        print("c es diferente")
+    if (aB):            # relanzamiento
+        print("El dado c es diferente")
         c = random.randint(1, 6)
         if (b == c):
             puntos_player_1 = +6
         else:
             puntos_player_1 = +3
-    if (cA):         # relanzamiento para dado 2
-        print("b es diferente")
-        b = random.randint(1, 6)
-        if (a == b):
-            puntos_player_1 = +6
-        else:
-            puntos_player_1 = +3
-    if (bC):         # relanzamiento para dado 1
-        print("a es diferente")
-        #a = random.randint(1, 6)
-        a = 4
-        if (c == a):
-            puntos_player_1 = +6
-        else:
-            puntos_player_1 = +3
-        print("Relanzamiento: ", a)
+    else:
+        if (cA or bC):         # relanzamiento
+            print("El dado a o el b es diferente")
+            #b = random.randint(1, 6)
+            aux = 3 #Valor de prueba
+            if (aux == c):
+                puntos_player_1 = +6
+            else:
+                puntos_player_1 = +3
+
 print("Puntos: ", puntos_player_1)
 
 #jugador 2
 
 # dados de prueba
-a = 2
+a = 5
 b = 4
 c = 4
 
@@ -58,35 +53,29 @@ bC = b == c
 cA = a == c
 
 print("Jugador 2")
+
 if (aB and bC):      # se compara si los 3 dados son iguales
     puntos_player_2 = +6
     print("suma 6")
 else:
-    if (aB):         # relanzamiento para dado 3
-        print("c es diferente")
-        c = random.randint(1, 6)
+    if (aB):            # relanzamiento
+        print("El dado c es diferente")
+        #c = random.randint(1, 6)
         if (b == c):
             puntos_player_2 = +6
         else:
             puntos_player_2 = +3
-    if (cA):         # relanzamiento para dado 2
-        print("b es diferente")
-        b = random.randint(1, 6)
-        if (a == b):
-            puntos_player_2 = +6
-        else:
-            puntos_player_2= +3
-    if (bC):         # relanzamiento para dado 1
-        print("a es diferente")
-        #a = random.randint(1, 6)
-        a = 4
-        if (c == a):
-            puntos_player_2 = +6
-        else:
-            puntos_player_2 = +3
-        print("Relanzamiento: ", a)
-print("Puntos: ", puntos_player_2)
+    else:
+        if (cA or bC):         # relanzamiento
+            print("El dado a o el b es diferente")
+            #b = random.randint(1, 6)
+            aux = 4 #Valor de prueba
+            if (aux == c):
+                puntos_player_2 = +6
+            else:
+                puntos_player_2 = +3
 
+print("Puntos: ", puntos_player_2)
 
 #RONDA 2
 
