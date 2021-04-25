@@ -48,10 +48,10 @@ print("\n\n", lineas, " RONDA 1 ", lineas)
 print("\nTurno del jugador 1, ", nj1)
 input("Presione enter para comenzar la partida")
 
-# dados de prueba
-a = 2
-b = 4
-c = 3
+# asignación de valores random
+a = random.randint(1, 6)
+b = random.randint(1, 6)
+c = random.randint(1, 6)
 
 
 aB = a == b
@@ -73,14 +73,14 @@ else:
                 puntos_player_1 = +3
         elif cA:         # si a y c son iguales, entonces el diferente es b
             # b = random.randint(1, 6)
-            aux = 3  # Valor de prueba
+            aux = random.randint(1, 6)  # Valor de prueba
             print("\tTu dado ", b, " ahora vale ", aux)
             if aux == a:
                 puntos_player_1 = +6
             else:
                 puntos_player_1 = +3
         else:  # por descarte, el diferente es a
-            aux = 1  # Valor de prueba
+            aux = random.randint(1, 6)  # Valor de prueba
             print("\tTu dado ", a, " ahora vale ", aux)
             if aux == c:
                 puntos_player_1 = +6
@@ -96,11 +96,10 @@ print("Puntos que has obtenido esta ronda: ", puntos_player_1)
 print("\n\nTurno del jugador 2, ", nj2)
 input("Presione enter para comenzar la partida")
 
-
-# dados de prueba
-a = 2
-b = 4
-c = 4
+# asignación de valores random
+a = random.randint(1, 6)
+b = random.randint(1, 6)
+c = random.randint(1, 6)
 
 aB = a == b  # realiza la validacion una sola vez para no tener que validarlo continuamente
 bC = b == c
@@ -114,22 +113,21 @@ else:
         input(relanzamiento_msj)
         if aB:            # relanzamiento, si a y b son iguales, entonces el diferente es c
             # aux = random.randint(1, 6)
-            aux = 4
+            aux = random.randint(1, 6)
             print("\tTu dado ", c, " ahora vale ", aux)
             if aux == b:  # compara b con el nuevo valor de c (ya sabemos que a es igual a b)
                 puntos_player_2 = +6
             else:
                 puntos_player_2 = +3
         elif cA:         # si a y c son iguales, entonces el diferente es b
-            # b = random.randint(1, 6)
-            aux = 4  # Valor de prueba
+            aux = random.randint(1, 6)  # Valor de prueba
             print("\tTu dado ", b, " ahora vale ", aux)
             if aux == a:
                 puntos_player_2 = +6
             else:
                 puntos_player_2 = +3
         else:  # por descarte, el diferente es a
-            aux = 4  # Valor de prueba
+            aux = random.randint(1, 6)  # Valor de prueba
             print("\tTu dado ", a, " ahora vale ", aux)
             if aux == c:
                 puntos_player_2 = +6
@@ -160,10 +158,10 @@ print("")
 
 print("\nTurno del jugador 1, ", nj1)
 
-# dados de prueba
-a = 2
-b = 4
-c = 4
+# asignación de valores random
+a = random.randint(1, 6)
+b = random.randint(1, 6)
+c = random.randint(1, 6)
 
 eleccion = int(input("Ingrese 1 si apuesta por par (en caso contrario presione cualquier otra tecla) "))
 
@@ -217,10 +215,10 @@ print("PUNTOS TOTALES: ", puntos_player_1)
 
 print("\nTurno del jugador 2, ", nj2)
 
-# dados de prueba
-a = 2
-b = 1
-c = 1
+# asignación de valores random
+a = random.randint(1, 6)
+b = random.randint(1, 6)
+c = random.randint(1, 6)
 
 eleccion = int(input("Ingrese 1 si apuesta por par (en caso contrario presione cualquier otra tecla) "))
 mayor = 0
